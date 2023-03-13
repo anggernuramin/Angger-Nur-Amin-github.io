@@ -37,18 +37,27 @@ h1 {
   .waves-home {
     margin-top: 0px;
   }
+  #profile-user {
+    order: -1;
+  }
+  #profile-img {
+    order: 1;
+  }
+  #blog {
+    padding-top: 0rem;
+  }
+  #blog .title-blog {
+    padding-top: 4rem;
+  }
 }
 @media (max-width: 600px) {
   .wrapper-home h1,
   p {
     text-align: center;
   }
-  #profile-user {
-    order: -1;
-    background-color: red;
-  }
-  #profile-img {
-    background-color: green;
-    order: 1;
+  .btn-cv {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 }
