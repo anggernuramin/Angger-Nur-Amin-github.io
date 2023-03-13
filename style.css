@@ -1,0 +1,54 @@
+h1 {
+  font-family: "Heebo", sans-serif;
+  letter-spacing: 2px;
+}
+
+.wrapper-home {
+  padding-top: 10rem;
+}
+.waves-home {
+  margin-top: -50px;
+}
+#blog,
+#contact {
+  background-color: #edf7fa;
+}
+#blog,
+#work,
+#contact {
+  padding-top: 5rem;
+}
+@media (max-width: 991.98px) {
+  .wrapper-home {
+    padding-top: 7rem;
+  }
+}
+@media screen and (max-width: 765px) {
+  .wrapper-home {
+    padding-top: 5rem;
+  }
+  .wrapper-home img {
+    width: 130px;
+    height: 130px;
+  }
+  button {
+    margin-top: 0;
+  }
+  .waves-home {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper-home h1,
+  p {
+    text-align: center;
+  }
+  #profile-user {
+    order: -1;
+    background-color: red;
+  }
+  #profile-img {
+    background-color: green;
+    order: 1;
+  }
+}

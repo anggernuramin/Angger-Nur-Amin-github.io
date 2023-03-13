@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css native -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+    <!-- Bootsrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <!-- style font Heebo -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary border-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="#">Angger Nur Amin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#work">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Home -->
+    <section id="home" class="container-fluid p-0">
+      <div class="wrapper-home container">
+        <div class="row d-flex">
+          <div id="profile-user" class="col-lg-6 text-xl-start text-sm-center align-items-baseline mt-md-3 order-sm-last">
+            <h1 class="fs-lg-1">
+              Hi, I am Angger,<br />
+              Front end Developer
+            </h1>
+            <p class="mt-lg-2 mt-sm-0">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <button class="bg-danger text-white p-2 fw-bold border border-danger rounded mt-2">Download Resume</button>
+          </div>
+          <div id="profile-img" class="col-lg-6 d-flex justify-content-center align-items-center order-lg-last">
+            <img src="aset/profil.JPG" alt="" width="243px" height="243px" class="rounded-circle border mx-auto" />
+          </div>
+        </div>
+      </div>
+      <svg class="waves-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#edf7fa"
+          fill-opacity="1"
+          d="M0,64L48,96C96,128,192,192,288,202.7C384,213,480,171,576,149.3C672,128,768,128,864,138.7C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Home end -->
+
+    <!-- Blog -->
+    <section id="blog" class="container-fluid p-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-11 d-flex justify-content-between align-items-center">
+            <h5>Recent post</h5>
+            <a href="">View all</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5 col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title fs-3">Making a design system from scratch</h5>
+                <h6 class="card-subtitle mb-2 text-muted mt-4">11 Maret 2023 | Learn Bootstrap</h6>
+                <p class="card-text mt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+              </div>
+            </div>
+          </div>
+          <!-- lg == desktop -->
+          <!-- md == tablet -->
+          <!-- sm == mobile -->
+          <div class="col-lg-5 offset-lg-1 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title h3">Creating pixel perfect icons in Figma</h5>
+                <h6 class="card-subtitle mb-2 text-muted mt-4">11 Maret 2023 | Learn Bootstrap</h6>
+                <p class="card-text mt-3">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,64L48,101.3C96,139,192,213,288,213.3C384,213,480,139,576,101.3C672,64,768,64,864,90.7C960,117,1056,171,1152,165.3C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Blog end -->
+
+    <!-- Work -->
+    <section id="work">
+      <div class="container-fluid p-0">
+        <div class="container">
+          <h4>Features Work</h4>
+          <div class="row">
+            <div class="col">
+              <div class="card mb-3 border-0">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-4">
+                    <img src="aset/projectQRCode.PNG" class="img-fluid rounded" alt="Image project qr code" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">QR Code Generator</h5>
+                      <h6 class="bg-danger d-inline-block px-2 text-white border me-3 rounded-pill mt-2">2022</h6>
+                      <span class="text-muted">Create Qr Code</span>
+                      <p class="card-text">a qr code generator website which includes features, builds qr codes dynamically, and can change color, size. then we can download images.</p>
+                      <a href="#" class="btn btn-primary">Show Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3" />
+            <div class="col">
+              <div class="card mb-3 border-0">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-4">
+                    <img src="Aset/projectQuiz.PNG" class="img-fluid rounded-start" alt="Image project quiz" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Quiz App</h5>
+                      <h6 class="bg-danger d-inline-block px-2 text-white border me-3 rounded-pill mt-2">2022</h6>
+                      <span class="text-muted d-inline-block">Quiz html | css | js</span>
+                      <p class="card-text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                      <a href="#" class="btn btn-primary">Show Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3" />
+            <div class="col">
+              <div class="card mb-3 border-0">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-4">
+                    <img src="Aset/projectTravel.PNG" class="img-fluid rounded-start" alt="Image project quiz" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Simple Landing page</h5>
+                      <h6 class="bg-danger d-inline-block px-2 text-white border me-3 rounded-pill mt-2">2023</h6>
+                      <span class="text-muted d-inline-block">Travel Agency</span>
+                      <p class="card-text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                      <a href="#" class="btn btn-primary">Show Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3" />
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#edf7fa"
+            fill-opacity="1"
+            d="M0,64L48,90.7C96,117,192,171,288,192C384,213,480,203,576,181.3C672,160,768,128,864,112C960,96,1056,96,1152,106.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <!-- Work End -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container-fluid px-0">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col">
+              <h2>Contact Me</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#fff"
+            fill-opacity="1"
+            d="M0,32L48,64C96,96,192,160,288,197.3C384,235,480,245,576,224C672,203,768,149,864,138.7C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <!-- Contact end -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid">
+        <div class="container pb-5">
+          <div class="row mb-2">
+            <div class="col text-center">
+              <a href="" class="text-primary"><i class="bi bi-github fs-4 me-1"></i></a>
+              <a href="" class="text-primary"><i class="bi bi-instagram fs-4 me-1"></i></a>
+              <a href="" class="text-primary"><i class="bi bi-linkedin fs-4 me-1"></i></a>
+              <a href="www.github.com/anggernuramin" class="text-primary fs-4 me-1"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <p>Copyright ©2023 All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
