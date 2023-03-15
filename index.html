@@ -77,9 +77,9 @@
     <!-- Blog -->
     <section id="blog" class="container-fluid p-0">
       <div class="container">
-        <div class="row">
+        <div class="row pt-5">
           <div class="col-11 d-flex justify-content-between align-items-center">
-            <h5 class="title-blog">Recent post</h5>
+            <h5 class="title-blog pt-4">Recent post</h5>
             <a href="">View all</a>
           </div>
         </div>
@@ -193,9 +193,24 @@
     </section>
     <!-- Work End -->
 
+    <!-- Modal Box -->
+
+    <!-- Modal Box end -->
+
     <!-- Contact -->
     <section id="contact">
       <div class="container-fluid px-0">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Contact</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body"></div>
+            </div>
+          </div>
+        </div>
         <div class="container">
           <div class="row text-center">
             <div class="col">
@@ -204,20 +219,27 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6">
-              <form>
+              <form name="submit-contact">
+                <!-- name pada input form harus sama dengan header yang ada pada goggle sheet -->
                 <div class="mb-3">
                   <label for="name" class="form-label">Your Name </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nama" />
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required />
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3" name="pesan"></textarea>
                 </div>
-                <button type="submit" class="btn btn-danger">Submit</button>
+                <!-- button kirim dan trigger modal box-->
+                <button type="submit" class="btn btn-primary btn-kirim">Submit</button>
+                <!-- button loading -->
+                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
               </form>
             </div>
           </div>
@@ -258,5 +280,47 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Script untuk submit form contact ke google sheet -->
+    <script>
+      function messageTrue() {
+        return `<p>Terimakasih,Form sudah kami terima`;
+      }
+      function messageFalse() {
+        return `<p>Mohon maaf 🙏 form tidak boleh kosong`;
+      }
+      function resetForm() {
+        document.forms["submit-contact"].reset();
+        document.forms["submit-contact"]["name"].value = "";
+        document.forms["submit-contact"]["email"].value = "";
+        document.forms["submit-contact"]["pesan"].value = "";
+      }
+      // url pada goggle sheet (web app)
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwH7U7MPzp3Eb42hLkp0K7Q5yZfXnYUL5gtTzGvdlsL42kjPmLDub6GkwPnWcY5fEL5KA/exec";
+
+      // seleksi form dan input untuk validasi
+      const form = document.forms["submit-contact"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // claslist toggle untuk menumpuk display button saat submit contact dikirim
+        btnKirim.classList.toggle("d-none");
+        btnLoading.classList.toggle("d-none");
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            btnKirim.classList.toggle("d-none");
+            btnLoading.classList.toggle("d-none");
+            alert("berhasil menyimpan data ke google sheet");
+            // function reset form agar isi input hilang
+            resetForm();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
