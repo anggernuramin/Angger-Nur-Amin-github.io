@@ -4,8 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- css native -->
-    <link rel="stylesheet" href="style.css" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
@@ -16,6 +14,12 @@
 
     <!-- style font Heebo -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+    <!-- style aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- css native -->
+    <link rel="stylesheet" href="style.css" />
 
     <title>Portfolio</title>
   </head>
@@ -52,10 +56,7 @@
       <div class="wrapper-home container">
         <div class="row d-flex">
           <div id="profile-user" class="col-lg-6 text-xl-start text-sm-center mt-md-3 order-sm-last">
-            <h1 class="fs-lg-1">
-              Hi, I am Angger,<br />
-              Front end Developer
-            </h1>
+            <h1 class="fs-lg-1">Hi I am Angger,<br />Front end Developer</h1>
             <p class="mt-lg-2 mt-sm-0">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
             <button class="btn-cv bg-danger text-white p-2 fw-bold border border-danger rounded mt-2">Download Resume</button>
           </div>
@@ -84,7 +85,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-5 col-md-6 mb-3">
+          <div class="col-lg-5 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title fs-3">Making a design system from scratch</h5>
@@ -96,7 +97,7 @@
           <!-- lg == desktop -->
           <!-- md == tablet -->
           <!-- sm == mobile -->
-          <div class="col-lg-5 offset-lg-1 col-md-6">
+          <div class="col-lg-5 offset-lg-1 col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title h3">Creating pixel perfect icons in Figma</h5>
@@ -127,9 +128,9 @@
               <div class="card mb-3 border-0">
                 <div class="row g-0 align-items-center">
                   <div class="col-md-4">
-                    <img src="aset/projectQRCode.PNG" class="img-fluid rounded" alt="Image project qr code" />
+                    <img src="aset/projectQRCode.PNG" class="img-fluid rounded img-work" alt="Image project qr code" />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-8 deskripsi-work">
                     <div class="card-body">
                       <h5 class="card-title">QR Code Generator</h5>
                       <h6 class="bg-danger d-inline-block px-2 text-white border me-3 rounded-pill mt-2">2022</h6>
@@ -146,9 +147,9 @@
               <div class="card mb-3 border-0">
                 <div class="row g-0 align-items-center">
                   <div class="col-md-4">
-                    <img src="Aset/projectQuiz.PNG" class="img-fluid rounded-start" alt="Image project quiz" />
+                    <img src="Aset/projectQuiz.PNG" class="img-fluid rounded-start img-work" alt="Image project quiz" />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-8 deskripsi-work">
                     <div class="card-body">
                       <h5 class="card-title">Quiz App</h5>
                       <h6 class="bg-danger d-inline-block px-2 text-white border me-3 rounded-pill mt-2">2022</h6>
@@ -165,9 +166,9 @@
               <div class="card mb-3 border-0">
                 <div class="row g-0 align-items-center">
                   <div class="col-md-4">
-                    <img src="Aset/projectTravel.PNG" class="img-fluid rounded-start" alt="Image project quiz" />
+                    <img src="Aset/projectTravel.PNG" class="img-fluid rounded-start img-work" alt="Image project quiz" />
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-8 deskripsi-work">
                     <div class="card-body">
                       <h5 class="card-title">Simple Landing page</h5>
                       <h6 class="bg-danger d-inline-block px-2 text-white border me-3 rounded-pill mt-2">2023</h6>
@@ -192,10 +193,6 @@
       </div>
     </section>
     <!-- Work End -->
-
-    <!-- Modal Box -->
-
-    <!-- Modal Box end -->
 
     <!-- Contact -->
     <section id="contact">
@@ -276,10 +273,53 @@
       </div>
     </footer>
     <!-- footer end -->
-    <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Scipt animation gsap (untuk animasi navbar dan text pd home ) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- script plugin text -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+    <script>
+      // gsap.from = artinya elemen kita yg ada dihtml akan dibuat sebagai patokan akhir
+      // parameter ke 1 adalah selector pd elemen html
+      // parameter ke 2 adalah untuk style posisi awal elemen
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      // gsap.from("footer", { duration: 1, opacity: 0, x: -100 });
+
+      // sedangakn untuk gsap.to = artinya elemen kita akan dijadikan sebagai patokan awal
+      // maka kita akan memberi style pada posisi akhir elemen
+
+      // plugin text
+      gsap.registerPlugin(TextPlugin);
+      gsap.from(".btn-cv ", { duration: 3, text: "", delay: 1.5 });
+      gsap.to(".btn-cv ", { duration: 3, text: "Download cv", delay: 1.5 });
+    </script>
+
+    <!-- Script aos animation (untuk animasi section blog dan work)-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // jika elemennya bnyak yg akan kita beri animasi,kita bisa melooping lalu menambahkan animasi secara dinamis
+      const imgWork = document.querySelectorAll(".img-work");
+      imgWork.forEach((img, index) => {
+        // gunakan datset untuk memberi data pada elemen html
+        img.dataset.aos = "fade-in";
+        img.dataset.aosDuration = "500";
+        img.dataset.aosDelay = (index + 1) * 100;
+      });
+      const deskripsiWork = document.querySelectorAll(".deskripsi-work");
+      deskripsiWork.forEach((deskripsi) => {
+        deskripsi.dataset.aos = "fade-left";
+        deskripsi.dataset.aosDuration = "1000";
+      });
+
+      // initialiasi aos secara global dan agr script aos berjalan
+      AOS.init({
+        // ubah nilai default false once menjadi true,agar animasi berjalan sekali saat user mengunjungi nya
+        once: true,
+      });
+    </script>
 
     <!-- Script untuk submit form contact ke google sheet -->
     <script>
