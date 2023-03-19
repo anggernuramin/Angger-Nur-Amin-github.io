@@ -11,13 +11,21 @@ h1 {
 }
 #blog,
 #contact {
-  background-color: #edf7fa;
+  /* background-color: var(--bs-dark-text); */
 }
+
+/* body {
+   bg wave
+  background-color: #edf7fa;
+} */
 
 #work,
 #contact {
   padding-top: 5rem;
 }
+/* form {
+  color: var(--bs-body-bg);
+} */
 
 @media (max-width: 991.98px) {
   .wrapper-home {

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
     <!-- Bootsrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
@@ -45,6 +44,31 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
+            <li class="nav-item dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <!-- set value apa yang sekarang active dengan atribuet data dan class theme-icon-active bawaan bootstrap -->
+                <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <!-- mengambil datadengan actribut data data-bs-theme-value -->
+                  <button class="dropdown-item d-flex align-items-center " type="button" data-bs-theme-value="light" aria-expanded="false">
+                  <!-- set value icon agar menimpa data sebelumnya -->
+                  <i class="bi bi-sun-fill me-2" data-theme-icon="bi-sun-fill"></i>Light
+                </li>
+                <li>
+                   <!-- mengambil datadengan actribut data data-bs-theme-value -->
+                   <button class="dropdown-item d-flex align-items-center " type="button" data-bs-theme-value="dark" aria-expanded="false">
+                    <!-- set value icon agar menimpa data sebelumnya -->
+                    <i class="bi bi-moon-fill me-2" data-theme-icon="bi-moon-fill"></i>Dark
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center " type="button" data-bs-theme-value="auto" aria-expanded="false">
+                    <!-- set value icon agar menimpa data sebelumnya -->
+                    <i class="bi bi-circle-half me-2" data-theme-icon="bi-circle-half"></i>Auto
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -52,22 +76,22 @@
     <!-- navbar end -->
 
     <!-- Home -->
-    <section id="home" class="container-fluid p-0">
+    <section id="home" class="container-fluid p-0" style="background-color: var(--bs-body-bg)">
       <div class="wrapper-home container">
         <div class="row d-flex">
           <div id="profile-user" class="col-lg-6 text-xl-start text-sm-center mt-md-3 order-sm-last">
             <h1 class="fs-lg-1">Hi I am Angger,<br />Front end Developer</h1>
             <p class="mt-lg-2 mt-sm-0">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-            <button class="btn-cv bg-danger text-white p-2 fw-bold border border-danger rounded mt-2">Download Resume</button>
+            <button class="btn-cv bg-primary text-white p-2 fw-bold border border-light rounded mt-2">Download Resume</button>
           </div>
           <div id="profile-img" class="col-lg-6 d-flex justify-content-center align-items-center order-lg-last">
             <img src="aset/profil.JPG" alt="" width="243px" height="243px" class="rounded-circle border mx-auto" />
           </div>
         </div>
       </div>
-      <svg class="waves-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#edf7fa"
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path class="waves-home"
+          fill="var(--bs-dark-text)"
           fill-opacity="1"
           d="M0,64L48,96C96,128,192,192,288,202.7C384,213,480,171,576,149.3C672,128,768,128,864,138.7C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -76,12 +100,12 @@
     <!-- Home end -->
 
     <!-- Blog -->
-    <section id="blog" class="container-fluid p-0">
+    <section id="blog" class="container-fluid p-0" style="background-color: var(--bs-dark-text)">
       <div class="container">
         <div class="row pt-5">
           <div class="col-11 d-flex justify-content-between align-items-center">
-            <h5 class="title-blog pt-4">Recent post</h5>
-            <a href="">View all</a>
+            <h5 class="title-blog pt-4" style="color: var(--bs-body-bg)">Recent post</h5>
+            <a href="" class="text-primary">View all</a>
           </div>
         </div>
         <div class="row">
@@ -110,7 +134,7 @@
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#fff"
+          fill="var(--bs-body-bg)"
           fill-opacity="1"
           d="M0,64L48,101.3C96,139,192,213,288,213.3C384,213,480,139,576,101.3C672,64,768,64,864,90.7C960,117,1056,171,1152,165.3C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -184,8 +208,8 @@
           </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#edf7fa"
+          <path class="waves-work"
+            fill="var(--bs-dark-text)"
             fill-opacity="1"
             d="M0,64L48,90.7C96,117,192,171,288,192C384,213,480,203,576,181.3C672,160,768,128,864,112C960,96,1056,96,1152,106.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
@@ -195,23 +219,12 @@
     <!-- Work End -->
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" style="background-color: var(--bs-dark-text)">
       <div class="container-fluid px-0">
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Contact</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body"></div>
-            </div>
-          </div>
-        </div>
         <div class="container">
           <div class="row text-center">
-            <div class="col">
-              <h2>Contact Me</h2>
+            <div class="col"> 
+              <h2 class="title-form">Contact Me</h2>
             </div>
           </div>
           <div class="row justify-content-center">
@@ -241,9 +254,9 @@
             </div>
           </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#fff"
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path class="waves-contact"
+            fill="var(--bs-body-bg)"
             fill-opacity="1"
             d="M0,32L48,64C96,96,192,160,288,197.3C384,235,480,245,576,224C672,203,768,149,864,138.7C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
@@ -275,7 +288,110 @@
     <!-- footer end -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Script dark mode bootsratp versi 5.3.0 -alpha1-->
+    <script>
+              (() => {
+          'use strict'
+
+          const storedTheme = localStorage.getItem('theme')
+
+          const getPreferredTheme = () => {
+            if (storedTheme) {
+              return storedTheme
+            }
+
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          }
+         
+          const setTheme = function (theme) {
+            const elementSvg = document.querySelectorAll('svg path')
+            const footer = document.querySelector('footer');
+            const blog = document.getElementById('blog');
+            const contact = document.getElementById('contact');
+            const wavesContact = document.querySelector('.waves-contact');
+            const wavesWork = document.querySelector('.waves-work');
+            const wavesHome = document.querySelector('.waves-home');
+            const titleForm = document.querySelector('.title-form')
+            const titleBlog = document.querySelector('.title-blog')
+           
+            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+           
+              document.documentElement.setAttribute('data-bs-theme', 'auto')
+              console.log('auto') 
+                footer.style.backgroundColor = 'white'
+                contact.style.backgroundColor = '#edf7fa'
+                wavesContact.style.fill = '#fff'
+                wavesWork.style.fill = '#edf7fa'
+                wavesHome.style.fill = '#edf7fa'
+                contact.style.color = 'black';
+                titleForm.style.color = 'black';
+                titleBlog.style.color = 'black';
+                blog.style.backgroundColor = '#edf7fa'
+               
+            } else {
+              // blog.style.backgroundColor = 'inherit'
+             
+             
+              document.documentElement.setAttribute('data-bs-theme', theme)
+              footer.style.backgroundColor = 'inherit'
+              contact.style.backgroundColor = ' var(--bs-dark-text)'
+              wavesContact.style.fill = 'var(--bs-body-bg)';
+              wavesWork.style.fill =  'var(--bs-dark-text)'
+              wavesHome.style.fill =  'var(--bs-dark-text)'
+              contact.style.color = 'var(--bs-body-bg)'
+              blog.style.backgroundColor = 'var(--bs-dark-text)';
+              titleForm.style.color = 'var(--bs-body-bg)';
+              titleBlog.style.color = 'var(--bs-body-bg)';
+              console.log('tema apa')
+            }
+          }
+
+          setTheme(getPreferredTheme())
+
+          // Custom theme manual ngger
+          const showActiveTheme = theme => {
+            // ambil kelas icon yang aktive(use untuk svg)
+            const activeThemeIcon = document.querySelector('.theme-icon-active')
+            // ambil tema
+            const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+            // ambil icon agar nanti berubah saat diklik
+            const iconOfActiveBtn = btnToActive.querySelector('i').dataset.themeIcon;
+
+            document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+              element.classList.remove('active')
+            })
+
+            btnToActive.classList.add('active')
+            // karena di js tidak boleh menggunakan desk,maka  jika di html menulis data menggunakan desk maka di js  menggunakan camel case
+            activeThemeIcon.classList.remove(activeThemeIcon.dataset.themeIconActive)
+            activeThemeIcon.classList.add(iconOfActiveBtn)
+            activeThemeIcon.dataset.iconActive = iconOfActiveBtn;
+          }
+          
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (storedTheme !== 'light' || storedTheme !== 'dark') {
+              
+              setTheme(getPreferredTheme())
+          
+            }
+          })
+
+          window.addEventListener('DOMContentLoaded', () => {
+            showActiveTheme(getPreferredTheme())
+
+            document.querySelectorAll('[data-bs-theme-value]')
+              .forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                  const theme = toggle.getAttribute('data-bs-theme-value')
+                  localStorage.setItem('theme', theme)
+                  setTheme(theme)
+                  showActiveTheme(theme)
+                })
+              })
+          })
+        })()
+    </script>
 
     <!-- Scipt animation gsap (untuk animasi navbar dan text pd home ) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
